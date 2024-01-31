@@ -1,0 +1,90 @@
+<html >
+<head>
+<title>Calculo_Volumen_LE</title>
+                       
+<script language="JavaScript" type="text/JavaScript">
+function Iva(){
+
+
+}
+function Calcular(){
+var a=document.forms['operaciones'].numero_a.value;
+var b=document.forms['operaciones'].numero_b.value;
+var c=document.forms['operaciones'].numero_c.value;
+
+a=Math.ceil(a)
+
+b=Math.ceil(b)
+
+c=Math.ceil(c)
+
+
+document.forms['operaciones'].resultado2.value=(a*b*c)/1000000
+
+document.forms['operaciones'].resultado2.value=document.forms['operaciones'].resultado2.value*167
+
+
+
+document.forms['operaciones'].resultado2.value=Math.ceil(document.forms['operaciones'].resultado2.value)
+
+
+if (Number(document.forms['operaciones'].resultado2.value)>Number(document.forms['operaciones'].numero_p.value)) {
+document.forms['operaciones'].resultado2.value=document.forms['operaciones'].resultado2.value
+} else {
+document.forms['operaciones'].resultado2.value=document.forms['operaciones'].numero_p.value
+}
+
+   }
+</script>
+</head>
+
+<body>
+<td>
+<FONT FACE="arial">
+<FONT SIZE=30>
+<FONT COLOR="green">
+<div align="center"><img src=https://libertyexpress.com/wp-content/themes/kutis/assets/png/logoLiberty.png>
+<form action="" method="post" id="operaciones" name="operaciones">
+<table width="30%" border="1" align="center" cellpadding="1" cellspacing="3">
+<tr>
+<td bordercolor="#000000" bgcolor="#8c8c8c" style="font-size:20px; class="CENTRO">----- <strong> Peso Volumetrico Exportacion V2.0 ---- </strong></td>
+</tr>
+<tr>
+<td bordercolor="#000000" bgcolor="#8c8c8c" style="font-size:20px; class="CENTRO">----- <strong> Vzla -  Europa, Rep. Dominicana y Chile ---- </strong></td>
+</tr>
+
+<tr>
+<td bgcolor="#268AE0"><strong>Digite Alto cm:</strong>
+<input type="text" style="font-size:20px; name="numero_a" id="numero_a" /></td>
+</tr>
+<tr>
+<td bgcolor="#268AE0"><strong>Digite Largo cm:</strong>
+<input type="text" style="font-size:20px; name="numero_b" id="numero_b" /></td>
+</tr>
+<tr>
+<td bgcolor="#268AE0"><strong>Digite Ancho cm:</strong>
+<input type="text" style="font-size:20px; name="numero_c" id="numero_c" /></td>
+</tr>
+<tr>
+
+<td bgcolor="#E0372A"><strong>Digite Peso Fisico Kilos:</strong>
+<input type="text"  style="font-size:20px; name="numero_p" id="numero_p" /></td>
+</tr>
+<tr>
+<td height="40" ><label></label>
+<label>
+<input type="button" name="button2" id="button2" value="Calcular" FONT-SIZE: 18pt style='width:200px; height:50px' onClick="Javascript: Calcular();"/>
+</label></td>
+
+</tr>
+<tr>
+
+<td><FONT FACE="impact" SIZE=8 COLOR="red">Peso a Facturar:
+<input type="text" style="font-size:50px; text-align:center"  name="resultado2" id="resultado2" readonly="readonly"/><label></label></td>
+</tr>
+
+</tr>
+</table>
+<label></label>
+</form>  
+<img src=https://i.postimg.cc/hjcNhdyn/comrcializacion.png></body>   </html>
